@@ -1,16 +1,24 @@
 from input import *
 
-
+#this was written by Alina Blake. Deal with it, bruh ;)
 def story():
     adjective1 = getWord("Enter a location: ")
     temperature1 = getNumber("Enter a Number: ")
     name1 = getWord ("Enter a name: ")
-    verb1 = getVerb ("Enter a verb: ")
-    noun1 = getNoun ("Enter a noun: ")
+    verb1 = getWord ("Enter a verb: ")
+    noun1 = getWord ("Enter a noun: ")
+    adjective2 = getWord ("Enter a texture") 
+    
+   
+   
     text = ""
-    text += "One day I randomly decided to time travel to the most pequiliar location. It was the home of a rare creature, known simply as the " +adjective1 
-    text += "unicorn. I could not stop staring at it's mystical" +noun1 ",the smooth yet dirt caked exterior protecting delicate yet necessary muscles that helped the mystical equine " +verb1
-    text += +name1 "looked at me,  
+    text += "One day I randomly decided to time travel to the most pequiliar location."  
+    text +=  "This was the home of a strange creature, the" +adjective1 "unicorn."
+    text += " I could not take my eyes off his" +adjective2 +noun1 ", which"
+   
+    text += +name1 "looked at me, his soulless eyes as black as dark matter and obsidian's lovechild. They seemed lethal, until I looked at " +name1 "'s headset and mysteriously levitating Xbox One controller. "
+    text += " "How does a unicorn play Call of Duty?" I asked myself, backing away slowly. It was too late. "
+    text += "
     
     
     text += ". It was disconbobulating, like the feeling of a day with the approximate temperature of " + temperature1

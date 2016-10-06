@@ -2,9 +2,13 @@ def isSwear(word):
     swearList = ["hell",
                  "fuck",
                  "shit",
-                 "ass",
                  "damn",
-                 #anatomical:
+                 "piss",
+                 "poop",
+                 "pee",
+                 "jizz",
+                 "cum",
+            #anatomical:
                  "cock",
                  "dick",
                  "schlong",
@@ -14,7 +18,19 @@ def isSwear(word):
                  "vulva",
                  "cunt",
                  "genital",
-                 #]
+                 "ass",
+                 "arse",
+                 "anus",
+                 "butt",
+                 "boob",
+                 "breast",
+                 
+            #offensive:
+                "bitch",
+                "bastard",
+                "whore",
+                "slut",
+            ]
     if word in swearList:
         return True
     else:

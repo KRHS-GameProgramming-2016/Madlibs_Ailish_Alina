@@ -1,9 +1,26 @@
 def isSwear(word):
-    swearList = ["poop",
-                 "pee"]
+    swearList = ["hell",
+                 "fuck",
+                 "shit",
+                 "ass",
+                 "damn",
+                 #anatomical:
+                 "cock",
+                 "dick",
+                 "schlong",
+                 "penis",
+                 "vagina",
+                 "pussy",
+                 "vulva",
+                 "cunt",
+                 "genital",
+                 #]
     if word in swearList:
         return True
     else:
+        for i in swearList:
+            if i in word:
+                return True
         return False
 
 def getMenuOption():
@@ -28,7 +45,7 @@ def getWord(prompt):
         if isSwear(response):
             goodInput = False
             print "Don't use that kind of language with me!"
-        return response
+    return response
 
 def getNumber(prompt):
     goodInput = False

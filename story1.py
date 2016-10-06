@@ -10,3 +10,4 @@ def story():
     text += ". It was like a " + temperature1
     text += " out."    
     return text
+

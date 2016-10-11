@@ -1,6 +1,6 @@
 from splash import *
 from input import *
-import therealstory1
+#import therealstory1
 import story2
 import story3
 
@@ -14,7 +14,7 @@ def madlibs():
         if option == "q":
             end = True
         elif option == "1":
-            print story1.story()
+            #print story1.story()
             raw_input()
         elif option == "2":
             print story2.story()

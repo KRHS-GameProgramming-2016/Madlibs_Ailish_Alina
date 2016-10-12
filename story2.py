@@ -2,8 +2,11 @@ from input import *
 
 #written by ailish
 def story():
+    
     firstname1 = getWord("Enter a first name: ")
     surname1 = getWord("Enter a last name: ")
+    init1 = surname1[0]
+    initial1 = init1.upper()
     fullname1 = firstname1 + " " + surname1
     
     weather1 = getWord("Enter an adjective describing weather: ")
@@ -15,6 +18,8 @@ def story():
     adjective1 = getWord("Enter an adjective: ")
     noun1 = getWord("Enter a noun: ")
     adjective2 = getWord("Enter an adjective: ")
+    adjective3 = getWord("Enter an adjective starting with "+initial1 + ": ")
+    
     
     
     text = ""
@@ -29,5 +34,8 @@ def story():
     text += "\n\"Who would do such a thing?\" the butler cried. A" +adjective2
     text += " maid stood becide him. "
     text += "\n\"Yes, who? And why?\" she added, seemingly as upset as the butler."
+    text += "\n\"I\'ll get to the bottom of this,\" I reassured them. \"They don't call me" +adjective3 + " " +surname1
+    text += " for nothing. "
     return text
 
+story()

@@ -1,14 +1,18 @@
 from input import *
 
 #written by ailish
-def story():
+
+# how to do certain things / mechanics i figured out to use for this
+# - initial-getter
+# - full name maker
+
+
+def beginning():
     
     firstname1 = getWord("Enter a first name: ")
     surname1 = getWord("Enter a last name: ")
-    init1 = surname1[0]
-    initial1 = init1.upper()
+    initial1 = surname1[0].upper()
     fullname1 = firstname1 + " " + surname1
-    
     weather1 = getWord("Enter an adjective describing weather: ")
     city1 = getWord("Enter the name of a city: ")
     profession1 = getWord("Enter a profession, like businessman or fisherman: ")
@@ -36,6 +40,15 @@ def story():
     text += "\n\"Yes, who? And why?\" she added, seemingly as upset as the butler."
     text += "\n\"I\'ll get to the bottom of this,\" I reassured them. \"They don't call me" +adjective3 + " " +surname1
     text += " for nothing. "
+    text += "\n Despite their apparent distress at Mr. " +surname2
+    text += "\'s death, I had my suspicions about the butler and the maid."
+    text += "\n \n Who should I investigate first? "
+    text += "\n\n    A) The butler"
+    text += "\n    B) The maid"
     return text
 
-story()
+def story():
+    beginning()
+    choice1 = getChoice("Make a selection: ")
+
+print story()

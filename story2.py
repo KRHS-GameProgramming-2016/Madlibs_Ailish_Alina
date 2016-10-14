@@ -1,11 +1,18 @@
 from input import *
 
 #written by ailish
-def story():
+
+# how to do certain things / mechanics i figured out to use for this
+# - initial-getter
+# - full name maker
+
+
+def beginning():
+    
     firstname1 = getWord("Enter a first name: ")
     surname1 = getWord("Enter a last name: ")
+    initial1 = surname1[0].upper()
     fullname1 = firstname1 + " " + surname1
-    
     weather1 = getWord("Enter an adjective describing weather: ")
     city1 = getWord("Enter the name of a city: ")
     profession1 = getWord("Enter a profession, like businessman or fisherman: ")
@@ -15,6 +22,8 @@ def story():
     adjective1 = getWord("Enter an adjective: ")
     noun1 = getWord("Enter a noun: ")
     adjective2 = getWord("Enter an adjective: ")
+    adjective3 = getWord("Enter an adjective starting with "+initial1 + ": ")
+    
     
     
     text = ""
@@ -29,5 +38,17 @@ def story():
     text += "\n\"Who would do such a thing?\" the butler cried. A" +adjective2
     text += " maid stood becide him. "
     text += "\n\"Yes, who? And why?\" she added, seemingly as upset as the butler."
+    text += "\n\"I\'ll get to the bottom of this,\" I reassured them. \"They don't call me" +adjective3 + " " +surname1
+    text += " for nothing. "
+    text += "\n Despite their apparent distress at Mr. " +surname2
+    text += "\'s death, I had my suspicions about the butler and the maid."
+    text += "\n \n Who should I investigate first? "
+    text += "\n\n    A) The butler"
+    text += "\n    B) The maid"
     return text
 
+def story():
+    beginning()
+    choice1 = getChoice("Make a selection: ")
+
+print story()

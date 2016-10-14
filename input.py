@@ -75,7 +75,17 @@ def getNumber(prompt):
                 print "Numbers only please!"
     return response
         
-        
+def getChoice():
+    goodInput = False
+    goodResponses = ["A",
+                     "B"]
+    while not goodInput:
+        response = raw_input("Make a selection: ")
+        if response.lower() in goodResponses:
+            goodInput = True
+        else:
+            print "Please make a valid selection!"
+    return response.lower()
 
 
 

@@ -7,7 +7,7 @@ from input import *
 # - full name maker
 
 
-def beginning():
+def story():
     
     firstname1 = getWord("Enter a first name: ")
     surname1 = getWord("Enter a last name: ")
@@ -23,8 +23,6 @@ def beginning():
     noun1 = getWord("Enter a noun: ")
     adjective2 = getWord("Enter an adjective: ")
     adjective3 = getWord("Enter an adjective starting with "+initial1 + ": ")
-    
-    
     
     text = ""
     text += "It was a " +weather1
@@ -46,9 +44,5 @@ def beginning():
     text += "\n\n    A) The butler"
     text += "\n    B) The maid"
     return text
-
-def story():
-    beginning()
-    choice1 = getChoice("Make a selection: ")
 
 print story()

@@ -75,7 +75,7 @@ def getNumber(prompt):
                 print "Numbers only please!"
     return response
         
-def getChoice():
+def getGender():
     goodInput = False
     goodResponses = ["A",
                      "B"]
@@ -87,7 +87,35 @@ def getChoice():
             print "Please make a valid selection!"
     return response.lower()
 
-
+def genderMachine():
+    
+    subjective = n
+    objective = n
+    possessiveDeterminer = n
+    possessivePronoun = n
+    reflexive = n
+    
+    gender = getGender()
+    if gender = a:
+        gender = male
+    if gender = b:
+        gender = female
+        
+    if gender = male:
+        subjective = he
+        objective = him
+        possessiveDeterminer = his
+        possessivePronoun = his
+        reflexive = himself
+    
+    if gender = female:
+        subjective = she
+        objective = her
+        possessiveDeterminer = her
+        possessivePronoun = hers
+        reflexive = herself
+        
+    
 
 
 

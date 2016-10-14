@@ -11,3 +11,4 @@ def story():
     text += " out."    
     return text
 
+story()

@@ -79,7 +79,8 @@ def getGender():
     print "Male or female?: A) Male B) Female"
     goodInput = False
     goodResponses = ["a",
-                     "b"]
+                     "b",
+                     "n"]
     while not goodInput:
         response = raw_input("Make a selection: ")
         if response.lower() in goodResponses:
@@ -104,6 +105,14 @@ def genderMachine(gender, word):
         possDeterminer = "his"
         possPronoun = "his"
         reflexive = "himself"
+        
+    class neutral():
+        subjective = "they"
+        objective = "them"
+        possDeterminer = "their"
+        possPronoun = "theirs"
+        reflexive = "themselves"
+        
     
     if gender == "a":
         gender = male
@@ -116,6 +125,13 @@ def genderMachine(gender, word):
         possDeterminer = male.possDeterminer
         possPronoun = male.possPronoun
         reflexive = male.reflexive
+        
+    if gender == "n":
+        subjective = neutral.subjective
+        objective = neutral.objective
+        possDeterminer = neutral.possDeterminer
+        possPronoun = neutral.possPronoun
+        reflexive = neutral.reflexive
         
     if gender == female:
         subjective = female.subjective

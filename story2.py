@@ -16,6 +16,14 @@ def story():
     weather1 = getWord("Enter an adjective describing weather: ")
     city1 = getWord("Enter the name of a city: ")
     profession1 = getWord("Enter a profession, like businessman or fisherman: ")
+    gender1 = getGender()
+    
+    subjective = genderMachine("subjective")
+    objective = genderMachine("objective")
+    possDeterminer = genderMachine("possDeterminer")
+    possPronoun = genderMachine("possPronoun")
+    reflexive = genderMachine("reflexive")
+    
     firstname2 = getWord("Enter another first name: ")
     surname2 = getWord("Enter another last name: ")
     fullname2 = firstname2 + " " + surname2
@@ -25,7 +33,7 @@ def story():
     adjective3 = getWord("Enter an adjective starting with "+initial1 + ": ")
     
     text = ""
-    text += "It was a " +weather1
+    text += "It was a " +subjective
     text += " day in " +city1
     text += " when our story began, and I was on my way to the scene of the crime. The murder of a wealthy " +profession1
     text += ", Mr. " +fullname2

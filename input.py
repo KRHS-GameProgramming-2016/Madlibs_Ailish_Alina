@@ -76,9 +76,10 @@ def getNumber(prompt):
     return response
         
 def getGender():
+    print "Male or female?: A) Male B) Female"
     goodInput = False
-    goodResponses = ["A",
-                     "B"]
+    goodResponses = ["a",
+                     "b"]
     while not goodInput:
         response = raw_input("Make a selection: ")
         if response.lower() in goodResponses:
@@ -87,34 +88,54 @@ def getGender():
             print "Please make a valid selection!"
     return response.lower()
 
-def genderMachine():
+def genderMachine(word):
     
-    subjective = n
-    objective = n
-    possessiveDeterminer = n
-    possessivePronoun = n
-    reflexive = n
+    class female():
+        subjective = "she"
+        objective = "her"
+        possDeterminer = "her"
+        possPronoun = "hers"
+        reflexive = "herself"
+        
+    class male():
+        subjective = "he"
+        objective = "him"
+        possDeterminer = "his"
+        possPronoun = "his"
+        reflexive = "himself"
     
     gender = getGender()
-    if gender = a:
-        gender = male
-    if gender = b:
-        gender = female
-        
-    if gender = male:
-        subjective = he
-        objective = him
-        possessiveDeterminer = his
-        possessivePronoun = his
-        reflexive = himself
     
-    if gender = female:
-        subjective = she
-        objective = her
-        possessiveDeterminer = her
-        possessivePronoun = hers
-        reflexive = herself
+    if gender == "a":
+        gender = male
+    if gender == "b":
+        gender = female
+    
+    if gender == male:
+        subjective = male.subjective
+        objective = male.objective
+        possDeterminer = male.possDeterminer
+        possPronoun = male.possPronoun
+        reflexive = male.reflexive
         
+    if gender == female:
+        subjective = female.subjective
+        objective = female.objective
+        possDeterminer = female.possDeterminer
+        possPronoun = female.possPronoun
+        reflexive = female.reflexive
+        
+    if word == "subjective":
+        return subjective
+    if word == "objective":
+        return objective
+    if word == "possDeterminer":
+        return possDeterminer
+    if word == "possPronoun":
+        return possPronoun
+    if word == "reflexive":
+        return reflexive
+
     
 
 

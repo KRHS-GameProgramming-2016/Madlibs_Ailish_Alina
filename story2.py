@@ -5,6 +5,7 @@ from input import *
 # how to do certain things / mechanics i figured out to use for this
 # - initial-getter
 # - full name maker
+# - gender chooser (in input)
 
 
 def story():

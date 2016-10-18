@@ -86,9 +86,10 @@ def getGender():
             goodInput = True
         else:
             print "Please make a valid selection!"
+            
     return response.lower()
 
-def genderMachine(word):
+def genderMachine(gender, word):
     
     class female():
         subjective = "she"
@@ -103,8 +104,6 @@ def genderMachine(word):
         possDeterminer = "his"
         possPronoun = "his"
         reflexive = "himself"
-    
-    gender = getGender()
     
     if gender == "a":
         gender = male
@@ -135,12 +134,6 @@ def genderMachine(word):
         return possPronoun
     if word == "reflexive":
         return reflexive
-
-    
-
-
-
-
 
 
 

@@ -151,7 +151,14 @@ def genderMachine(gender, word):
     if word == "reflexive":
         return reflexive
 
+#put below  in inputting-variables section of code, if using gendermachine:
 
+    #gender1 = getGender()
+    #subjective = genderMachine(gender1, "subjective")
+    #objective = genderMachine(gender1, "objective")
+    #possDeterminer = genderMachine(gender1, "possDeterminer")
+    #possPronoun = genderMachine(gender1, "possPronoun")
+    #reflexive = genderMachine(gender1, "reflexive")
 
 
 

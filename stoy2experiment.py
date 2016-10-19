@@ -6,6 +6,13 @@ from input import *
 # - initial-getter
 # - full name maker
 
+#def story():
+    #beginning()
+    #MAKEACHOICE()
+    #MaidStory()
+    #ButlerStory()
+    #return text
+#print story
 
 def beginning():
     
@@ -45,21 +52,12 @@ def beginning():
     return text
 print beginning()
 
-
 def MAKEACHOICE():
    text = ""
    text += "\n\n    A) The butler"
    text += "\n  B) The maid"
-   
    return text
 print MAKEACHOICE()
-
-def story():
-    beginning()
-    MAKEACHOICE()
-    MaidChoice()
-    ButlerChoice()
-    
 
 def getSuspectOption():
     goodInput = False
@@ -75,23 +73,23 @@ def getSuspectOption():
 
 def MaidChoice():
     MaidChoice = getSuspectOption()
-    if getSuspectOption == "b":
-       print text == "/n The maid seems like a good idea. /n"
+    if MaidChoice == "b":
+       print "/n The maid seems like a good idea./n"
        MaidStory() 
 print MaidChoice
 
 def ButlerChoice():
     ButlerChoice = getSuspectOption()
-    if getSuspectOption == "a":
-       print text == "/n Investigating the bulter seems like the best choice. /n"
+    if MaidChoice == "a":
+       print "/n Investigating the bulter seems like the best choice. /n"
        ButlerStory() 
 print ButlerChoice
 
 def MaidStory():
-    text = "wip"
+    text += "wip"
 
 def ButlerStory(): 
-    text = "wip"
+    text += "wip"
 
 
 

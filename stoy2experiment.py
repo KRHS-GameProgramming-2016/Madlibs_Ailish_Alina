@@ -78,13 +78,14 @@ def MaidChoice():
     if getSuspectOption == "b":
        print text == "/n The maid seems like a good idea. /n"
        MaidStory() 
-    
+print MaidChoice
+
 def ButlerChoice():
     ButlerChoice = getSuspectOption()
     if getSuspectOption == "a":
        print text == "/n Investigating the bulter seems like the best choice. /n"
        ButlerStory() 
-
+print ButlerChoice
 
 def MaidStory():
     text = "wip"
@@ -92,8 +93,7 @@ def MaidStory():
 def ButlerStory(): 
     text = "wip"
 
-print MaidStory()
-print ButlerStory()
+
 
 
 

@@ -49,49 +49,41 @@ def beginning():
     text += "\n Despite their apparent distress at Mr. " +surname2
     text += "\'s death, I had my suspicions about the butler and the maid."
     text += "\n \n Who should I investigate first? "
+    text += "\n\n  A) The butler"
+    text += "\n  B) The maid \n"
     return text
-print beginning()
 
-def MAKEACHOICE():
-   text = ""
-   text += "\n\n    A) The butler"
-   text += "\n  B) The maid"
-   return text
-print MAKEACHOICE()
+def story():
+    print beginning()
+    choice = getSuspectOption()
+    if choice == "a":
+        print ButlerStory()
+    if choice == "b":
+        print MaidStory()
 
 def getSuspectOption():
     goodInput = False
     goodResponses = ["a",
                     "b",]
     while not goodInput:
-        response = raw_input("Please choose to investigaate the butler (A), or the maid (B): ")
+        response = raw_input("Please choose to investigate the butler (A), or the maid (B): ")
         if response.lower() in goodResponses:
             goodInput = True
         else:
             print "Please make a valid selection!"
     return response.lower()
 
-def MaidChoice():
-    MaidChoice = getSuspectOption()
-    if MaidChoice == "b":
-       print "/n The maid seems like a good idea./n"
-       MaidStory() 
-print MaidChoice
-
-def ButlerChoice():
-    ButlerChoice = getSuspectOption()
-    if MaidChoice == "a":
-       print "/n Investigating the bulter seems like the best choice. /n"
-       ButlerStory() 
-print ButlerChoice
-
 def MaidStory():
-    text += "wip"
+    text = "\n"
+    text += "I decided to investigate the maid first. "
+    return text
 
 def ButlerStory(): 
-    text += "wip"
+    text = "\n"
+    text += "I decided it wise to investigate the butler first. "
+    return text
 
-
+story()
 
 
 

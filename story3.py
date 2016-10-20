@@ -5,6 +5,13 @@ def story():
     size1 = getWord("Enter a word that describes the overall size of a canine figure: ")
     dogbreed1 = getWord("Enter a dog breed: ")
     texture1 = getWord("Enter a texture of the ground: ")
+    
+    gender1 = getGender()
+    subjective = genderMachine(gender1, "subjective")
+    objective = genderMachine(gender1, "objective")
+    possDeterminer = genderMachine(gender1, "possDeterminer")
+    possPronoun = genderMachine(gender1, "possPronoun")
+    reflexive = genderMachine(gender1, "reflexive")
 
 #story()
 
@@ -20,5 +27,5 @@ not make sense*. Life was a challenge, to say the least.
 text = ""
 text += "The" +size1
 text += +dogbreed1 "trotted along the alleyway, paws hardened after walking along"
-text += +texture1 "streets for too long. As" 
+text += +texture1 "streets for too long. As" +subjective 
 text += " *words go here* "

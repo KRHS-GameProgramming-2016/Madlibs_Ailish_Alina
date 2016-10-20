@@ -1,14 +1,13 @@
 from input import *
 
-#written by ailish
+#written by ailish and mercilessly edited by Alina
 
 # how to do certain things / mechanics i figured out to use for this
 # - initial-getter
 # - full name maker
-# - gender chooser (in input)
 
 
-def story():
+def beginning():
     
     firstname1 = getWord("Enter a first name: ")
     surname1 = getWord("Enter a last name: ")
@@ -17,14 +16,6 @@ def story():
     weather1 = getWord("Enter an adjective describing weather: ")
     city1 = getWord("Enter the name of a city: ")
     profession1 = getWord("Enter a profession, like businessman or fisherman: ")
-    gender1 = getGender()
-    
-    subjective = genderMachine(gender1, "subjective")
-    objective = genderMachine(gender1, "objective")
-    possDeterminer = genderMachine(gender1, "possDeterminer")
-    possPronoun = genderMachine(gender1, "possPronoun")
-    reflexive = genderMachine(gender1, "reflexive")
-    
     firstname2 = getWord("Enter another first name: ")
     surname2 = getWord("Enter another last name: ")
     fullname2 = firstname2 + " " + surname2
@@ -32,9 +23,10 @@ def story():
     noun1 = getWord("Enter a noun: ")
     adjective2 = getWord("Enter an adjective: ")
     adjective3 = getWord("Enter an adjective starting with "+initial1 + ": ")
-    print printer(firstname1, surname1, initial1, fullname1, weather1, city1, profession1, firstname2, surname2, fullname2, adjective1, noun1, adjective2, adjective3)
+    #choice1 = getChoice("Enter the letter first letter of the alphabet: ")
+    #choice2 = getChoice("Enter the second letter of the alphabet: ")
     
-def printer(firstname1, surname1, initial1, fullname1, weather1, city1, profession1, firstname2, surname2, fullname2, adjective1, noun1, adjective2, adjective3):
+    
     text = ""
     text += "It was a " +weather1
     text += " day in " +city1
@@ -54,6 +46,43 @@ def printer(firstname1, surname1, initial1, fullname1, weather1, city1, professi
     text += "\n \n Who should I investigate first? "
     text += "\n\n    A) The butler"
     text += "\n    B) The maid"
+    text += +suspect
     return text
 
+def story():
+    beginning()
+    MaidChoice()
+    ButlerChoice()
+    
+
+def getSuspectOption(suspect):
+    goodInput = False
+    goodResponses = ["a",
+                    "b",]()
+    while not goodInput:
+        response = raw_input("Make a selection: ")
+        if response.lower() in goodResponses:
+            goodInput = True
+        else:
+            print "Please make a valid selection!"
+    return response.lower()
+
+
+def MaidChoice():
+    MaidChoice = getSuspectOption()
+    if getSuspectOption == b:
+       print text == "/n The maid seems like a good idea. /n" 
+    
+def ButlerChoice():
+    ButlerChoice = getSuspectOption()
+    if getSuspectOption == a:
+       print text == "/n Investigating the bulter seems like the best choice. /n" 
+
+
+
+
 print story()
+
+
+
+    

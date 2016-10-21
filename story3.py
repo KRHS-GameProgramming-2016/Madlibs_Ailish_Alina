@@ -7,11 +7,11 @@ def story():
     texture1 = getWord("Enter a texture of the ground: ")
     
     gender1 = getGender()
-    subjective = genderMachine(gender1, "subjective")
-    objective = genderMachine(gender1, "objective")
-    possDeterminer = genderMachine(gender1, "possDeterminer")
-    possPronoun = genderMachine(gender1, "possPronoun")
-    reflexive = genderMachine(gender1, "reflexive")
+    subjective = genderMachine(gender1, "subjective") # SHE danced, HE danced
+    objective = genderMachine(gender1, "objective") # i like HER, i like HIM
+    possDeterminer = genderMachine(gender1, "possDeterminer") # HER book, HIS book
+    possPronoun = genderMachine(gender1, "possPronoun") # the book is HERS, the book is HIS
+    reflexive = genderMachine(gender1, "reflexive") # she likes HERSELF, he likes HIMSELF
 
 #story()
 

@@ -91,54 +91,28 @@ def getGender():
     return response.lower()
 
 def genderMachine(gender, word):
-    
-    class female():
-        subjective = "she"
-        objective = "her"
-        possDeterminer = "her"
-        possPronoun = "hers"
-        reflexive = "herself"
         
-    class male():
-        subjective = "he"
-        objective = "him"
-        possDeterminer = "his"
-        possPronoun = "his"
-        reflexive = "himself"
-        
-    class neutral():
-        subjective = "they"
-        objective = "them"
-        possDeterminer = "their"
-        possPronoun = "theirs"
-        reflexive = "themselves"
-        
-    
     if gender == "a":
         gender = male
     if gender == "b":
         gender = female
     
     if gender == male:
-        subjective = male.subjective
-        objective = male.objective
-        possDeterminer = male.possDeterminer
-        possPronoun = male.possPronoun
-        reflexive = male.reflexive
+        subjective = "he"
+        objective = "him"
+        possDeterminer = "his"
+        possPronoun = "his"
+        reflexive = "himself"
+        BorG  = "boy"
         
-    if gender == "n":
-        subjective = neutral.subjective
-        objective = neutral.objective
-        possDeterminer = neutral.possDeterminer
-        possPronoun = neutral.possPronoun
-        reflexive = neutral.reflexive
         
     if gender == female:
-        subjective = female.subjective
-        objective = female.objective
-        possDeterminer = female.possDeterminer
-        possPronoun = female.possPronoun
-        reflexive = female.reflexive
+        subjective = "she"
+        objective = "her"
+        possDeterminer = "her"
+        possPronoun = "hers"
+        reflexive = "herself"
+        BorG = "girl"
         
     if word == "subjective":
         return subjective

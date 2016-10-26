@@ -6,14 +6,6 @@ from input import *
 # - initial-getter
 # - full name maker
 
-#def story():
-    #beginning()
-    #MAKEACHOICE()
-    #MaidStory()
-    #ButlerStory()
-    #return text
-#print story
-
 def story():
     
     firstname1 = getWord("Enter a first name: ")
@@ -30,7 +22,6 @@ def story():
     noun1 = getWord("Enter a noun: ")
     adjective2 = getWord("Enter an adjective: ")
     adjective3 = getWord("Enter an adjective starting with "+initial1 + ": ")
-    
 
     text = ""
     text += "It was a " +weather1
@@ -39,10 +30,9 @@ def story():
     text += ", Mr. " +victimfull
     text += ", had just been reported by the butler at his giant, " +adjective1
     text += " mansion. \n \n When I arrived, the body of Mr. " +victimsur
-    text += " lay in a pool of blood, a " +noun1
-    text += " stabbed into his chest. The butler stood by the body, distraught. " 
-    text += "\n\"Who would do such a thing?\" the butler cried. A" +adjective2
-    text += " maid stood becide him. "
+    text += " lay in a pool of blood, a large puncture wound in his chest. "
+    text += "The butler stood by the body, distraught. \"Who would do such a thing?\" he cried. A" +adjective2
+    text += " maid was standing beside him. "
     text += "\n\"Yes, who? And why?\" she added, seemingly as upset as the butler."
     text += "\n\"I\'ll get to the bottom of this,\" I reassured them. \"They don't call me" +adjective3 + " " +surname1
     text += " for nothing. "
@@ -74,14 +64,15 @@ def MaidStory(victimfirst, victimsur):
     victimfull = victimfirst + " " + victimsur
    
     text = "\n"
-    text += "I decided to investigate the maid first. " +victimfull
+    text += "I decided to investigate the maid first. " +victimsur
     return text
 
 def ButlerStory(victimfirst, victimsur): 
     victimfull = victimfirst + " " + victimsur
     
     text = "\n"
-    text += "I decided it wise to investigate the butler first. " +victimfull
+    text += "I decided it wise to investigate the butler first. He had been the one to find Mr." +victimsur
+    text += "'s body, and had made the 911 call himself. "
     return text
 
 story()

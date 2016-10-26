@@ -92,12 +92,8 @@ def getGender():
 
 def genderMachine(gender, word):
         
-    if gender == "a":
-        gender = male
-    if gender == "b":
-        gender = female
     
-    if gender == male:
+    if gender == "b":
         subjective = "he"
         objective = "him"
         possDeterminer = "his"
@@ -106,7 +102,7 @@ def genderMachine(gender, word):
         BorG  = "boy"
         
         
-    if gender == female:
+    if gender == "b":
         subjective = "she"
         objective = "her"
         possDeterminer = "her"
@@ -124,6 +120,8 @@ def genderMachine(gender, word):
         return possPronoun
     if word == "reflexive":
         return reflexive
+    if word == "BorG":
+        return BorG
 
 #put below  in inputting-variables section of code, if using gendermachine:
 

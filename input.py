@@ -21,7 +21,6 @@ def isSwear(word):
                  "ass",
                  "arse",
                  "anus",
-                 "butt",
                  "boob",
                  "breast",
                  
